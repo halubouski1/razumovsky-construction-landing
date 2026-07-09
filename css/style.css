@@ -154,7 +154,7 @@ button {
 /* ---- Hero top ---- */
 .hero__top {
     width: 100%;
-    padding-left: 45px;
+    padding-left: 0px;
     padding-right: 72px;
 }
 
@@ -590,7 +590,7 @@ button {
 }
 
 .services-card:hover .services-card__desc {
-    max-height: 140px;
+    max-height: 1000px;
     margin-top: 20px;
     opacity: 1;
 }
@@ -1504,7 +1504,6 @@ button {
     font-family: 'Bagoss Condensed', serif;
     font-weight: 400;
     font-size: 25px;
-    line-height: 336%;
     color: #373430;
     transition: opacity 0.3s ease;
 }

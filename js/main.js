@@ -107,9 +107,14 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.services-slider'))
 
   const servicesSlider = new Swiper('.services-slider', {
     slidesPerView: 'auto',
-    spaceBetween: 14,
+    spaceBetween: 10, // 1919px and below
     loop: true,
     speed: 600,
+    breakpoints: {
+      1920: {
+        spaceBetween: 14, // 1920px and up
+      },
+    },
   });
 
   const prevBtn = document.querySelector('.services__prev');
