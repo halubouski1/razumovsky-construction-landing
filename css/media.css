@@ -935,6 +935,10 @@
         padding-bottom: 60px;
     }
 
+    .choose .services__nav {
+        display: flex;
+    }
+
     .choose__label {
         font-size: 12px;
         line-height: 125%;
@@ -1061,6 +1065,7 @@
         width: 297px;
         height: 520px;
         padding: 14px 20px;
+        padding-bottom: 26px;
     }
 
     .choose-slider .swiper-slide {
@@ -1075,9 +1080,12 @@
         flex-direction: column;
     }
 
+    .choose-card__bottom {
+        opacity: 1;
+    }
+
     .choose-card__btn {
-        gap: 40px;
-        max-width: 100%;
+        display: none;
     }
 
     .choose-card__desc {
