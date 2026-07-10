@@ -202,6 +202,10 @@ button {
     color: #fff;
 }
 
+.hero__title-mobile {
+    display: none;
+}
+
 .hero__actions {
     display: flex;
     justify-content: space-between;
@@ -576,21 +580,25 @@ button {
 
 .services-card__desc {
     max-width: 340px;
-    max-height: 0;
+    display: grid;
+    grid-template-rows: 0fr;
     margin-top: 0;
     opacity: 0;
-    overflow: hidden;
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
     letter-spacing: -0.03em;
-    color: #fff;
     color: rgba(255, 255, 255, 0.85);
-    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+    transition: grid-template-rows 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+}
+
+.services-card__desc > span {
+    overflow: hidden;
+    min-height: 0;
 }
 
 .services-card:hover .services-card__desc {
-    max-height: 1000px;
+    grid-template-rows: 1fr;
     margin-top: 20px;
     opacity: 1;
 }
@@ -1369,16 +1377,29 @@ button {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 214px 63px 47px 50px;
+    overflow: hidden;
     background-color: #fff;
     color: #292929;
+}
+
+/* Scrollable region — the image and close button stay static, this scrolls
+   on short screens */
+.popup__scroll {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 214px 63px 47px 50px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .popup__close {
     position: absolute;
     top: 24px;
     right: 24px;
+    z-index: 3;
     display: grid;
     place-items: center;
     width: 34px;
@@ -1624,4 +1645,55 @@ button {
 .menu__social img {
     width: 21px;
     height: 21px;
+}
+
+/*PRELOADER*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    opacity: 1;
+    background-color: #000;
+    overflow: hidden;
+    cursor: progress;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+#preloader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+}
+
+.loader:before , .loader:after{
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(188, 188, 188, 0.3) inset;
+}
+.loader:after {
+  box-shadow: 0 2px 0 #fbd9a4 inset;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {  transform: rotate(0)}
+  100% { transform: rotate(360deg)}
 }

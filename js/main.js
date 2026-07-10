@@ -96,43 +96,59 @@ if (aboutText) {
 // Services slider — loops forward, can't go left from the first slide
 // ========================================
 if (typeof Swiper !== 'undefined' && document.querySelector('.services-slider')) {
-  // Swiper needs enough slides for loop mode (~2x the visible count), otherwise
-  // it silently disables the loop. Clone the cards until there are plenty.
-  const wrapper = document.querySelector('.services-slider .swiper-wrapper');
-  const originalSlides = Array.from(wrapper.children);
-  const MIN_SLIDES = 12;
-  while (wrapper.children.length < MIN_SLIDES) {
-    originalSlides.forEach((slide) => wrapper.appendChild(slide.cloneNode(true)));
-  }
-
-  const servicesSlider = new Swiper('.services-slider', {
-    slidesPerView: 'auto',
-    spaceBetween: 10, // 1919px and below
-    loop: true,
-    speed: 600,
-    breakpoints: {
-      1920: {
-        spaceBetween: 14, // 1920px and up
-      },
-    },
-  });
-
+  const sliderEl = document.querySelector('.services-slider');
+  const wrapper = sliderEl.querySelector('.swiper-wrapper');
+  // Pristine markup (the original 4 cards) — restored when the slider is torn
+  // down for the mobile stacking layout.
+  const originalHTML = wrapper.innerHTML;
   const prevBtn = document.querySelector('.services__prev');
   const nextBtn = document.querySelector('.services__next');
+  let servicesSlider = null;
 
-  // Disable "prev" whenever we're back on the very first slide
   const syncPrev = () => {
+    if (!servicesSlider) return;
     prevBtn.classList.toggle('swiper-button-disabled', servicesSlider.realIndex === 0);
   };
 
-  nextBtn.addEventListener('click', () => servicesSlider.slideNext());
+  const initServices = () => {
+    if (servicesSlider) return;
+    wrapper.innerHTML = originalHTML;
+    // Swiper needs enough slides for loop mode; clone the cards until there are plenty.
+    const slides = Array.from(wrapper.children);
+    while (wrapper.children.length < 12) {
+      slides.forEach((slide) => wrapper.appendChild(slide.cloneNode(true)));
+    }
+    servicesSlider = new Swiper(sliderEl, {
+      slidesPerView: 'auto',
+      loop: true,
+      speed: 600,
+      breakpoints: {
+        571: { spaceBetween: 10 }, // 571px to 1919px
+        1920: { spaceBetween: 14 }, // 1920px and up
+      },
+    });
+    servicesSlider.on('slideChange', syncPrev);
+    syncPrev();
+  };
+
+  const destroyServices = () => {
+    if (!servicesSlider) return;
+    servicesSlider.destroy(true, true);
+    servicesSlider = null;
+    wrapper.innerHTML = originalHTML; // back to the pristine 4 cards for the stack
+  };
+
+  // Below 570px the slider becomes a sticky stack of the 4 original cards.
+  const mqStack = window.matchMedia('(max-width: 570px)');
+  const applyServices = () => (mqStack.matches ? destroyServices() : initServices());
+  applyServices();
+  mqStack.addEventListener('change', applyServices);
+
+  nextBtn.addEventListener('click', () => servicesSlider && servicesSlider.slideNext());
   prevBtn.addEventListener('click', () => {
-    if (servicesSlider.realIndex === 0) return;
+    if (!servicesSlider || servicesSlider.realIndex === 0) return;
     servicesSlider.slidePrev();
   });
-
-  servicesSlider.on('slideChange', syncPrev);
-  syncPrev();
 }
 
 // ========================================
@@ -277,3 +293,16 @@ if (phoneInput && typeof window.intlTelInput !== 'undefined') {
   phoneInput.addEventListener('input', syncHint);
   syncHint();
 }
+
+// preloader
+document.body.style.overflow = 'hidden';
+const loader = () => {
+    document.body.style.overflow = '';
+    const preloader = document.getElementById('preloader');
+    const fadeout = setInterval(() => {
+        const opacity = getComputedStyle(preloader).opacity;
+        opacity > 0 ? preloader.style.opacity = opacity - 0.1000 : (clearInterval(fadeout), preloader.remove());
+    }, 15);
+}
+
+setTimeout(() => loader(), 2000);

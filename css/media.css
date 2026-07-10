@@ -514,7 +514,7 @@
         max-height: 630px;
     }
 
-    .popup__content {
+    .popup__scroll {
         padding: 160px 47px 35px 40px;
     }
 
@@ -733,4 +733,543 @@
         flex-direction: column-reverse;
         gap: 30px;
     }
+}
+
+@media (max-width: 570px) {
+    /* header */
+    .header {
+        padding: 20px 16px 0px 16px;
+    }
+
+    .header__burger {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* hero */
+    .hero__inner {
+        justify-content: space-between;
+        gap: 0;
+        padding-top: 180px;
+        padding-bottom: 63px;
+    }
+
+    .hero__lead {
+        font-size: 12px;
+        line-height: 142%;
+        max-width: 322px;
+        margin-bottom: 16px;
+    }
+
+    .hero__top {
+        padding-right: 16px;
+    }
+
+    .hero__line-cap {
+        width: 51px;
+        height: 3px;
+    }
+
+    .hero__title-desktop {
+        display: none;
+    }
+
+    .hero__title-mobile {
+        display: block;
+        font-weight: 400;
+        font-size: 37px;
+        line-height: 100%;
+        color: #fff;
+        max-width: 310px;
+    }
+
+    .hero__bottom {
+        gap: 30px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 19px 20px 20px 32px;
+    }
+
+    .btn__arrow {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* menu */
+    .menu__panel {
+        max-width: 100%;
+    }
+
+    /* popup */
+    .popup__window {
+        flex-direction: column;
+        position: relative;
+        max-height: 100%;
+        height: auto;
+    }
+
+    .popup {
+        padding: 10px;
+    }
+
+    .popup__title {
+        font-size: 50px;
+        line-height: 92%;
+        max-width: 320px;
+    }
+
+    .popup__image {
+        height: 40%;
+        flex-shrink: 0;
+    }
+
+    .popup__content {
+        position: static;
+        background: #F4F4F4;
+        flex: 1;
+        min-height: 0;
+    }
+
+    .popup__scroll {
+        padding: 100px 20px 35px 20px;
+    }
+
+    .popup__close {
+        top: 15px;
+        right: 15px;
+    }
+
+    .popup__input {
+        padding: 23px 23px 23px 34px;
+        font-size: 18px;
+        background: #fff;
+    }
+
+    .popup__input::placeholder, .popup__phone-hint {
+        font-size: 18px !important;
+    }
+
+    .popup__form {
+        gap: 11px;
+    }
+
+    .popup__submit {
+        padding: 22px 20px 22px 32px;
+    }
+
+    .popup__socials {
+        display: none;
+    }
+
+    /* about */
+    .about {
+        padding: 90px 16px 120px 16px;
+        gap: 50px;
+    }
+
+    .about__label {
+        font-size: 16px;
+        line-height: 313%;
+    }
+
+    .about__text {
+        font-size: 20px;
+        line-height: 160%;
+    }
+
+    .about__content {
+        gap: 70px;
+    }
+
+    .about__btn {
+        padding: 17px 20px 17px 32px;
+    }
+
+    /* expert */
+    .expert {
+        margin: 0;
+        border-radius: 0;
+        padding: 37px 16px 30px 16px;
+    }
+
+    .expert__text {
+        font-size: 12px;
+        line-height: 158%;
+        max-width: 316px;
+    }
+
+    .expert__bottom {
+        gap: 410px;
+    }
+
+    .expert__title {
+        font-size: 48px;
+        line-height: 93%;
+        max-width: 340px;
+    }
+
+    .expert__buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .expert__bottom-left {
+        width: 100%;
+    }
+
+    /* choose */
+    .choose {
+        padding-top: 125px;
+        padding-left: 16px;
+        padding-right: 22px;
+        padding-bottom: 60px;
+    }
+
+    .choose__label {
+        font-size: 12px;
+        line-height: 125%;
+        padding-top: 12px;
+        margin-bottom: 19px;
+    }
+
+    .choose__title {
+        font-size: 30px;
+        line-height: 117%;
+        max-width: 330px;
+        margin-bottom: 70px;
+    }
+
+    .services__nav-label {
+        display: none;
+    }
+
+    .services__nav-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Services — sticky stacking cards instead of the slider */
+    .services__nav {
+        display: none;
+    }
+
+    .services {
+        overflow: visible;   /* allow position: sticky */
+        padding-bottom: 30px;   /* no empty space after the stack */
+    }
+
+    .services__head {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .services-card {
+        border-radius: 5px;
+        padding-left: 27px;
+        padding-bottom: 35px;
+    }
+
+    .services-card__name {
+        font-size: 35px;
+        line-height: 91%;
+        max-width: 180px;
+    }
+
+    .services-card__top-right {
+        margin-left: 10px;
+    }
+
+    .services-card__learn {
+        min-width: 0px;
+        font-size: 10px;
+        padding: 8px 12px 8px 19px;
+    }
+
+    .services-card__top-inner {
+        height: 57px;
+    }
+
+    .services-card__num {
+        font-size: 45px;
+    }
+
+    .services-card__top-left {
+        gap: 40px;
+    }
+
+    .services-card__unit {
+        font-size: 14px;
+    }
+
+    .services-card__desc {
+        font-size: 11px;
+        max-width: 224px;
+    }
+
+    .services-card__code {
+        font-size: 14px;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .services-slider {
+        padding: 0 16px;
+        overflow: visible;
+        /* visible slice of each stacked card — kept small so every card fits
+           on short screens; tweak this one value to taste */
+        --stack-top: 120px;
+    }
+
+    .services-slider .swiper-wrapper {
+        display: block;      /* plain column, not a flex track */
+    }
+
+    .services-slider .swiper-slide {
+        position: sticky;
+        width: 100%;
+        height: auto;
+    }
+
+    /* 10px gap between the cards in the expanded (flow) state */
+    .services-slider .swiper-slide:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    /* Each card sticks a bit lower than the previous, so a slice stays visible */
+    .services-slider .swiper-slide:nth-child(1) { top: 0; }
+    .services-slider .swiper-slide:nth-child(2) { top: var(--stack-top); }
+    .services-slider .swiper-slide:nth-child(3) { top: calc(var(--stack-top) * 2); }
+    .services-slider .swiper-slide:nth-child(4) { top: calc(var(--stack-top) * 3); }
+
+    .services-card {
+        width: 100%;
+        height: 480px;
+    }
+
+    .choose-card {
+        width: 297px;
+        height: 520px;
+        padding: 14px 20px;
+    }
+
+    .choose-slider .swiper-slide {
+        width: 297px;
+    }
+
+    .choose-card__head {
+        gap: 9px;
+    }
+
+    .choose-card__footer {
+        flex-direction: column;
+    }
+
+    .choose-card__btn {
+        gap: 40px;
+        max-width: 100%;
+    }
+
+    .choose-card__desc {
+        text-align: center;
+    }
+
+    /* different */
+    .different {
+        padding: 0px 16px 70px 16px;
+    }
+
+    .different__title {
+        font-size: 55px;
+        line-height: 100%;
+        max-width: 320px;
+    }
+
+    .different__top {
+        margin-bottom: 80px;
+    }
+
+    .different__icon {
+        width: 72px;
+        height: 72px;
+    }
+
+    .different__icon img {
+        width: 33px;
+        height: 33px;
+    }
+
+    .different__item {
+        flex-direction: column;
+        gap: 17px;
+        align-items: start;
+    }
+
+    .different__item-title {
+        font-size: 18px;
+        max-width: 100px;
+        white-space: wrap;
+    }
+
+    .different__item-desc {
+        font-size: 12px;
+        max-width: 151px;
+        line-height: 158%;
+    }
+
+    .different__item-desc br {
+        display: none;
+    }
+
+    .different__grid {
+        column-gap: 15px;
+        row-gap: 80px;
+    }
+
+    /* .cta */
+    .cta {
+        margin: 0;
+        border-radius: 0;
+        padding: 38px 16px 35px 16px;
+    }
+
+    .cta__contact {
+        font-size: 16px;
+    }
+
+    .cta__title {
+        font-size: 40px;
+        line-height: 88%;
+        max-width: 324px;
+    }
+
+    .cta__buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta__bottom-left {
+        width: 100%;
+    }
+
+    /* footer */
+    .footer {
+        margin: 0px;
+        padding: 90px 16px 45px 16px;
+    }
+
+    .footer__nav a {
+        font-size: 65px;
+    }
+
+    .footer__nav {
+        gap: 25px;
+    }
+
+    .footer__divider {
+        margin-top: 100px;
+        margin-bottom: 45px;
+        margin-left: -16px;
+        margin-right: -16px;
+        width: calc(100% + 32px);
+    }
+
+    /* Restructured footer content below the divider:
+       row 1 = Phone + dev-logo, row 2 = E-Mail (full width), Contact Us hidden */
+    .footer__middle {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        row-gap: 60px;
+    }
+
+    /* Flatten the two groups so their items can be reordered together */
+    .footer__info,
+    .footer__contacts {
+        display: contents;
+    }
+
+    .footer__contact-us {
+        display: none;
+    }
+
+    .footer__contact {
+        align-items: flex-start;
+    }
+
+    .footer__contacts .footer__contact:first-child {
+        order: 1;
+    }
+
+    .footer__dev {
+        margin-top: 10px;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .footer__contacts .footer__contact:last-child {
+        order: 3;
+        flex: 0 0 100%;
+    }
+
+    .footer__contact-value {
+        font-size: 25px;
+    }
+
+    .footer__dev img {
+        width: 52px;
+    }
+
+    /* socials above, copyright pinned to the bottom */
+    .footer__bottom {
+        align-items: center;
+        gap: 90px;
+        margin-top: 70px;
+    }
+
+    .footer__socials {
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 15px;
+    }
+
+    .footer__contact-label {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    .footer__social:last-child {
+        display: none;
+    }
+
+    .footer__social {
+        font-size: 25px;
+        gap: 12px;
+    }
+
+    .footer__social img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .footer__copy {
+        font-size: 20px;
+        gap: 33px;
+    }
+
+    .footer__privacy {
+        font-size: 16px;
+    }
+
+
 }

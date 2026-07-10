@@ -16,7 +16,10 @@
 
 <header class="header">
     <a href="#" class="header__logo">
-        <img src="assets/img/logo.svg" alt="Razumovsky Construction">
+        <picture>
+            <source media="(max-width: 570px)" srcset="assets/img/logo-mobile.svg">
+            <img src="assets/img/logo.svg" alt="Razumovsky Construction">
+        </picture>
     </a>
     <button class="header__burger" type="button" aria-label="Open menu">
         <img src="assets/icons/burger.svg" alt="">
@@ -58,7 +61,10 @@
         </div>
 
         <div class="hero__bottom">
-            <h1 class="hero__title">We are a full-service enterprise. We design, engineer, and build your dream home</h1>
+            <h1 class="hero__title">
+                <span class="hero__title-desktop">We are a full-service enterprise. We design, engineer, and build your dream home</span>
+                <span class="hero__title-mobile">We design, engineer, and build your dream home</span>
+            </h1>
 
             <div class="hero__actions">
                 <div class="hero__buttons">
@@ -92,7 +98,7 @@
     <div class="about__content">
         <p class="about__text">Razumovsky Construction LLC has been building quality homes in Portland, Oregon, since 2008. Founded by Aleksey "Aleks" Razumovsky, the company specializes in foundations, flooring, and roofing, delivering expert craftsmanship on time and within budget. As a licensed Master Craftsman and Oregon State Inspector, Aleks is committed to building homes with lasting quality, trust, and excellence</p>
 
-        <button class="btn btn--dark" data-popup="popup-request">
+        <button class="btn btn--dark about__btn" data-popup="popup-request">
             <span>Leave a Request</span>
             <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -163,7 +169,7 @@
 
                     <div class="services-card__bottom">
                         <h3 class="services-card__name">Structural Assessments</h3>
-                        <p class="services-card__desc">Get a clear assessment of your home's structural condition before small issues become costly repairs</p>
+                        <p class="services-card__desc"><span>Get a clear assessment of your home's structural condition before small issues become costly repairs</span></p>
                     </div>
 
                     <button class="services-card__btn" type="button" aria-label="Learn more">
@@ -207,7 +213,7 @@
 
                     <div class="services-card__bottom">
                         <h3 class="services-card__name">New Construction</h3>
-                        <p class="services-card__desc">Creating custom homes, additions, and ADUs <br> with quality craftsmanship since 2008</p>
+                        <p class="services-card__desc"><span>Creating custom homes, additions, and ADUs <br> with quality craftsmanship since 2008</span></p>
                     </div>
 
                     <button class="services-card__btn" type="button" aria-label="Learn more">
@@ -251,7 +257,7 @@
 
                     <div class="services-card__bottom">
                         <h3 class="services-card__name">House Renovation</h3>
-                        <p class="services-card__desc">Transform your home with beautifully crafted kitchens, bathrooms, and custom additions</p>
+                        <p class="services-card__desc"><span>Transform your home with beautifully crafted kitchens, bathrooms, and custom additions</span></p>
                     </div>
 
                     <button class="services-card__btn" type="button" aria-label="Learn more">
@@ -295,7 +301,7 @@
 
                     <div class="services-card__bottom">
                         <h3 class="services-card__name">Repair</h3>
-                        <p class="services-card__desc">Reliable home repairs that protect your <br> investment for years to come</p>
+                        <p class="services-card__desc"><span>Reliable home repairs that protect your <br> investment for years to come</span></p>
                     </div>
 
                     <button class="services-card__btn" type="button" aria-label="Learn more">
@@ -658,7 +664,7 @@
             <div class="different__icon"><img src="assets/icons/different-1.svg" alt=""></div>
             <div class="different__info">
                 <h3 class="different__item-title">Trusted sources</h3>
-                <span class="different__item-desc">Our designers use high- <br> quality materials</span>
+                <span class="different__item-desc">Our designers use high-<br>quality materials</span>
             </div>
         </div>
 
@@ -820,9 +826,13 @@
 
         <div class="popup__content">
             <button class="popup__close" type="button" data-popup-close aria-label="Close popup">
-                <img src="assets/icons/menu-close.svg" alt="">
+                <picture>
+                    <source media="(max-width: 570px)" srcset="assets/icons/menu-close-mob.svg">
+                    <img src="assets/icons/menu-close.svg" alt="">
+                </picture>
             </button>
 
+            <div class="popup__scroll" data-lenis-prevent>
             <div class="popup__top">
                 <h2 class="popup__title">Let's build your dream home</h2>
 
@@ -845,8 +855,13 @@
                 <a href="#" class="popup__social">Instagram <img src="assets/icons/footer-link.svg" alt=""></a>
                 <a href="#" class="popup__social">whatsapp <img src="assets/icons/footer-link.svg" alt=""></a>
             </div>
+            </div>
         </div>
     </div>
+</div>
+<div id="preloader">
+        <img src="./assets/img/logo-mobile.svg" alt="">
+        <span class="loader"></span>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
