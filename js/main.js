@@ -305,4 +305,4 @@ const loader = () => {
     }, 15);
 }
 
-setTimeout(() => loader(), 2000);
+setTimeout(() => loader(), 5000);
