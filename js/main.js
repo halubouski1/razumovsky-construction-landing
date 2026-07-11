@@ -261,6 +261,30 @@ document.addEventListener('keydown', (e) => {
   if (menu && menu.classList.contains('is-open')) closeMenu();
 });
 
+// ========================================
+// Smooth scroll for in-page anchor links (menu / header / footer)
+// ========================================
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  const href = link.getAttribute('href');
+  if (!href) return;
+  if (href === '#') {
+    // Bare placeholder link — don't let it jump to the top
+    link.addEventListener('click', (e) => e.preventDefault());
+    return;
+  }
+  const target = document.querySelector(href);
+  if (!target) return;
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (menu && menu.classList.contains('is-open')) closeMenu();
+    if (lenis) {
+      lenis.scrollTo(target, { duration: 1.2 });
+    } else {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
 // intl-tel-input — auto-detect country from the typed phone number
 const phoneInput = document.querySelector('#popup-phone');
 if (phoneInput && typeof window.intlTelInput !== 'undefined') {

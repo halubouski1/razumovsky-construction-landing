@@ -440,6 +440,13 @@ button {
     color: #fff;
 }
 
+/* Whole-card link — covers everything so a click anywhere navigates */
+.services-card__link {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+}
+
 /* Legibility gradient over the background image */
 .services-card::before {
     content: '';
@@ -463,6 +470,7 @@ button {
 .services-card__top-inner {
     display: flex;
     height: 87px;
+    display: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 

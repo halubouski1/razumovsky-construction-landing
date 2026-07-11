@@ -15,7 +15,7 @@
 <body>
 
 <header class="header">
-    <a href="#" class="header__logo">
+    <a href="/" class="header__logo">
         <picture>
             <source media="(max-width: 570px)" srcset="assets/img/logo-mobile.svg">
             <img src="assets/img/logo.svg" alt="Razumovsky Construction">
@@ -35,21 +35,21 @@
 
         <div class="menu__inner">
             <nav class="menu__nav">
-                <a href="#">Home</a>
-                <a href="#">Services</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </nav>
 
             <div class="menu__socials">
                 <a href="#" class="menu__social">Instagram <img src="assets/icons/footer-link.svg" alt=""></a>
-                <a href="#" class="menu__social">whatsapp <img src="assets/icons/footer-link.svg" alt=""></a>
+                <a href="https://wa.me/19712424048" class="menu__social">whatsapp <img src="assets/icons/footer-link.svg" alt=""></a>
             </div>
         </div>
     </aside>
 </div>
 
-<section class="hero">
+<section class="hero" id="home">
     <video class="hero__video" src="assets/vid/hero.mp4" autoplay muted loop playsinline></video>
 
     <div class="hero__inner">
@@ -75,7 +75,7 @@
                             <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                       </button>
-                    <a href="#" class="btn btn--ghost">
+                    <a href="https://wa.me/19712424048" class="btn btn--ghost">
                         <span>Call today</span>
                         <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -92,7 +92,7 @@
     </div>
 </section>
 
-<section class="about" data-aos="fade-up">
+<section class="about" data-aos="fade-up" id="about">
     <span class="about__label">About Us</span>
 
     <div class="about__content">
@@ -108,7 +108,7 @@
     </div>
 </section>
 
-<section class="services" data-aos="fade-up">
+<section class="services" data-aos="fade-up" id="services">
     <div class="services__head">
         <h2 class="services__title">Our <span>Services</span></h2>
 
@@ -139,6 +139,7 @@
 
             <div class="swiper-slide">
                 <article class="services-card" style="background-image: url('assets/img/services-card-1.jpg')">
+                    <a href="#" data-popup="popup-request" class="services-card__link" aria-label="Structural Assessments"></a>
                     <div class="services-card__top">
                         <div class="services-card__top-inner">
                             <div class="services-card__top-left">
@@ -156,7 +157,7 @@
                                       <rect x="40.6045" width="9.28118" height="11.0214" rx="3" fill="white" fill-opacity="0.25" />
                                     </svg>
                                 </div>
-                                <a href="#" class="services-card__learn btn btn--ghost">
+                                <a href="#" data-popup="popup-request" class="services-card__learn btn btn--ghost" tabindex="-1" aria-hidden="true">
                                     <span>Learn More</span>
                                     <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -172,7 +173,7 @@
                         <p class="services-card__desc"><span>Get a clear assessment of your home's structural condition before small issues become costly repairs</span></p>
                     </div>
 
-                    <button class="services-card__btn" type="button" aria-label="Learn more">
+                    <button class="services-card__btn" type="button" tabindex="-1" aria-hidden="true">
                         <svg class="icon-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 7H13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M7.5 2L13 7L7.5 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -183,6 +184,7 @@
 
             <div class="swiper-slide">
                 <article class="services-card" style="background-image: url('assets/img/services-card-2.jpg')">
+                    <a href="#" data-popup="popup-request" class="services-card__link" aria-label="New Construction"></a>
                     <div class="services-card__top">
                         <div class="services-card__top-inner">
                             <div class="services-card__top-left">
@@ -200,7 +202,7 @@
                                       <rect x="40.6045" width="9.28118" height="11.0214" rx="3" fill="white" fill-opacity="0.25" />
                                     </svg>
                                 </div>
-                                <a href="#" class="services-card__learn btn btn--ghost">
+                                <a href="#" data-popup="popup-request" class="services-card__learn btn btn--ghost" tabindex="-1" aria-hidden="true">
                                     <span>Learn More</span>
                                     <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -216,7 +218,7 @@
                         <p class="services-card__desc"><span>Creating custom homes, additions, and ADUs <br> with quality craftsmanship since 2008</span></p>
                     </div>
 
-                    <button class="services-card__btn" type="button" aria-label="Learn more">
+                    <button class="services-card__btn" type="button" tabindex="-1" aria-hidden="true">
                         <svg class="icon-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 7H13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M7.5 2L13 7L7.5 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -227,6 +229,7 @@
 
             <div class="swiper-slide">
                 <article class="services-card" style="background-image: url('assets/img/services-card-3.jpg')">
+                    <a href="#" data-popup="popup-request" class="services-card__link" aria-label="House Renovation"></a>
                     <div class="services-card__top">
                         <div class="services-card__top-inner">
                             <div class="services-card__top-left">
@@ -244,7 +247,7 @@
                                       <rect x="40.6045" width="9.28118" height="11.0214" rx="3" fill="white" fill-opacity="0.25" />
                                     </svg>
                                 </div>
-                                <a href="#" class="services-card__learn btn btn--ghost">
+                                <a href="#" data-popup="popup-request" class="services-card__learn btn btn--ghost" tabindex="-1" aria-hidden="true">
                                     <span>Learn More</span>
                                     <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -260,7 +263,7 @@
                         <p class="services-card__desc"><span>Transform your home with beautifully crafted kitchens, bathrooms, and custom additions</span></p>
                     </div>
 
-                    <button class="services-card__btn" type="button" aria-label="Learn more">
+                    <button class="services-card__btn" type="button" tabindex="-1" aria-hidden="true">
                         <svg class="icon-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 7H13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M7.5 2L13 7L7.5 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -271,6 +274,7 @@
 
             <div class="swiper-slide">
                 <article class="services-card" style="background-image: url('assets/img/services-card-4.jpg')">
+                    <a href="#" data-popup="popup-request" class="services-card__link" aria-label="Repair"></a>
                     <div class="services-card__top">
                         <div class="services-card__top-inner">
                             <div class="services-card__top-left">
@@ -288,7 +292,7 @@
                                       <rect x="40.6045" width="9.28118" height="11.0214" rx="3" fill="white" fill-opacity="0.25" />
                                     </svg>
                                 </div>
-                                <a href="#" class="services-card__learn btn btn--ghost">
+                                <a href="#" data-popup="popup-request" class="services-card__learn btn btn--ghost" tabindex="-1" aria-hidden="true">
                                     <span>Learn More</span>
                                     <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -304,7 +308,7 @@
                         <p class="services-card__desc"><span>Reliable home repairs that protect your <br> investment for years to come</span></p>
                     </div>
 
-                    <button class="services-card__btn" type="button" aria-label="Learn more">
+                    <button class="services-card__btn" type="button" tabindex="-1" aria-hidden="true">
                         <svg class="icon-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 7H13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M7.5 2L13 7L7.5 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -322,10 +326,10 @@
 
     <div class="expert__inner">
         <div class="expert__top">
-            <a href="#" class="expert__logo">
+            <a href="/" class="expert__logo">
                 <img src="assets/img/logo.svg" alt="Razumovsky Construction">
             </a>
-            <a href="#" class="expert__contact">Contact Us</a>
+            <a href="https://wa.me/19712424048" class="expert__contact">Contact Us</a>
         </div>
 
         <div class="expert__bottom">
@@ -340,7 +344,7 @@
                             <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    <a href="#" class="btn btn--ghost">
+                    <a href="https://wa.me/19712424048" class="btn btn--ghost">
                         <span>Call today</span>
                         <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -403,7 +407,7 @@
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $1,250</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/kitchen-and-bathroom-remodeling-services-in-portland/" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -429,7 +433,7 @@
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $980</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/kitchen-and-bathroom-remodeling-services-in-portland/" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -455,7 +459,7 @@
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $1,250</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/siding-for-homes-in-portland-or/" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -481,7 +485,7 @@
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $2,400</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/excavation-services-in-portland/" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -507,7 +511,7 @@
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $3,100</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/roof-repair-and-installation-in-portland-or/" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -533,7 +537,7 @@
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $1,600</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/floor-installation-in-portland-or/" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -559,7 +563,7 @@
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $4,200</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/concrete-services-in-portland/" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -578,14 +582,14 @@
                             <span class="choose-card__line"></span>
                             <span class="choose-card__num">008</span>
                         </div>
-                        <h3 class="choose-card__name">Interior Painting</h3>
+                        <h3 class="choose-card__name">Framing</h3>
                     </div>
                     <div class="choose-card__bottom">
-                        <p class="choose-card__desc">Clean, meticulous interior painting that refreshes every room with a professional finish.</p>
+                        <p class="choose-card__desc">Clean, meticulous framing that ensures structural integrity and aesthetic appeal.</p>
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $850</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/framing-construction-services-in-portland-or/" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -604,14 +608,14 @@
                             <span class="choose-card__line"></span>
                             <span class="choose-card__num">009</span>
                         </div>
-                        <h3 class="choose-card__name">Landscaping</h3>
+                        <h3 class="choose-card__name">Drywall and Painting</h3>
                     </div>
                     <div class="choose-card__bottom">
-                        <p class="choose-card__desc">Thoughtful landscaping and hardscaping that turn your outdoor space into a true extension of home.</p>
+                        <p class="choose-card__desc">Professional drywall installation and painting services for a flawless finish.</p>
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $1,900</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/drywall-installation-services-in-portland-or/" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -630,14 +634,40 @@
                             <span class="choose-card__line"></span>
                             <span class="choose-card__num">010</span>
                         </div>
-                        <h3 class="choose-card__name">Electrical</h3>
+                        <h3 class="choose-card__name">Decks and Fences</h3>
                     </div>
                     <div class="choose-card__bottom">
-                        <p class="choose-card__desc">Safe, up-to-code electrical work — from rewiring to fixtures — handled by licensed professionals.</p>
+                        <p class="choose-card__desc">Beautiful, durable decks and fences built to last — from design to installation.</p>
                         <div class="choose-card__divider"></div>
                         <div class="choose-card__footer">
                             <span class="choose-card__price">Starting at $1,150</span>
-                            <a href="#" class="btn btn--ghost choose-card__btn">
+                            <a href="https://razumovskyconstruction.com/decks-installation-in-portland-or/" class="btn btn--ghost choose-card__btn">
+                                <span>Learn More</span>
+                                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="swiper-slide">
+                <article class="choose-card" style="background-image: url('assets/img/quality-card-11.jpg')">
+                    <div class="choose-card__top">
+                        <div class="choose-card__head">
+                            <span class="choose-card__line"></span>
+                            <span class="choose-card__num">011</span>
+                        </div>
+                        <h3 class="choose-card__name">ADU Construction</h3>
+                    </div>
+                    <div class="choose-card__bottom">
+                        <p class="choose-card__desc">Design and build beautiful, code-compliant accessory dwelling units that add flexible living space, rental income potential, and long-term property value.</p>
+                        <div class="choose-card__divider"></div>
+                        <div class="choose-card__footer">
+                            <span class="choose-card__price">Starting at $1,150</span>
+                            <a href="#" data-popup="popup-request" class="btn btn--ghost choose-card__btn">
                                 <span>Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -731,10 +761,10 @@
 
     <div class="cta__inner">
         <div class="cta__top">
-            <a href="#" class="cta__logo">
+            <a href="/" class="cta__logo">
                 <img src="assets/img/logo.svg" alt="Razumovsky Construction">
             </a>
-            <a href="#" class="cta__contact">Contact Us</a>
+            <a href="https://wa.me/19712424048" class="cta__contact">Contact Us</a>
         </div>
 
         <div class="cta__bottom">
@@ -749,7 +779,7 @@
                             <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    <a href="#" class="btn btn--ghost">
+                    <a href="https://wa.me/19712424048" class="btn btn--ghost">
                         <span>Call today</span>
                         <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -764,13 +794,13 @@
     </div>
 </section>
 
-<footer class="footer">
+<footer class="footer" id="contact">
     <div class="footer__top">
         <nav class="footer__nav">
-            <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
         <button class="footer__totop" type="button" aria-label="Scroll to top">
             <img src="assets/icons/arrow-to-top.svg" alt="">
@@ -781,7 +811,7 @@
 
     <div class="footer__middle">
         <div class="footer__info">
-            <a href="#" class="footer__contact-us">
+            <a href="https://wa.me/19712424048" class="footer__contact-us">
                 <span>Contact Us</span>
                 <img src="assets/icons/contact-us-arrow.svg" alt="">
             </a>
@@ -794,7 +824,7 @@
         <div class="footer__contacts">
             <div class="footer__contact">
                 <span class="footer__contact-label">Phone <img src="assets/icons/footer-star-label.svg" alt=""></span>
-                <a href="tel:9712424048" class="footer__contact-value">971-242-4048</a>
+                <a href="tel:+19712424048" class="footer__contact-value">971-242-4048</a>
             </div>
             <div class="footer__contact">
                 <span class="footer__contact-label">E-Mail <img src="assets/icons/footer-star-label.svg" alt=""></span>
@@ -810,7 +840,7 @@
         </div>
         <div class="footer__socials">
             <a href="#" class="footer__social">telegram <img src="assets/icons/footer-link.svg" alt=""></a>
-            <a href="#" class="footer__social">whatsapp <img src="assets/icons/footer-link.svg" alt=""></a>
+            <a href="https://wa.me/19712424048" class="footer__social">whatsapp <img src="assets/icons/footer-link.svg" alt=""></a>
             <a href="#" class="footer__social">instagram <img src="assets/icons/footer-link.svg" alt=""></a>
         </div>
     </div>
@@ -853,7 +883,7 @@
 
             <div class="popup__socials">
                 <a href="#" class="popup__social">Instagram <img src="assets/icons/footer-link.svg" alt=""></a>
-                <a href="#" class="popup__social">whatsapp <img src="assets/icons/footer-link.svg" alt=""></a>
+                <a href="https://wa.me/19712424048" class="popup__social">whatsapp <img src="assets/icons/footer-link.svg" alt=""></a>
             </div>
             </div>
         </div>
