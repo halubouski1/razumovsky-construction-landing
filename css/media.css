@@ -980,7 +980,12 @@
     .services-card {
         border-radius: 5px;
         padding-left: 27px;
+        justify-content: start;
         padding-bottom: 35px;
+    }
+
+    .services-card__bottom {
+        padding-top: 30px;
     }
 
     .services-card__name {
@@ -1084,8 +1089,14 @@
         opacity: 1;
     }
 
-    .choose-card__btn {
+    .choose-card__price {
         display: none;
+    }
+
+    .choose-card__btn {
+        gap: 40px;
+        max-width: 100%;
+        padding: 15px 16px 15px 24px;
     }
 
     .choose-card__desc {
