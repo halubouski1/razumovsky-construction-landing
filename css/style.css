@@ -899,6 +899,7 @@ button {
     display: flex;
     align-items: center;
     gap: 38px;
+    justify-content: center;
 }
 
 .choose-card__price {
@@ -917,6 +918,10 @@ button {
     padding: 14px 20px 14px 28px;
     gap: 16px;
     font-size: 14px;
+}
+
+.mob__btn {
+    display: none;
 }
 
 /* ==========================================================================

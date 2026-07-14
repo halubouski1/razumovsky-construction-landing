@@ -1098,6 +1098,11 @@
         width: 100%;
         max-width: 100%;
         padding: 15px 16px 15px 24px;
+        display: none;
+    }
+
+    .mob__btn {
+        display: flex;
     }
 
     .choose-card__desc {
